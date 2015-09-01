@@ -27,3 +27,10 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 Route::get('users', 'UserController@index');
 Route::get('user/{id}', 'UserController@show');
+
+//tasks
+Route::get('tasks', 'TaskController@index');
+Route::get('task/create', 'TaskController@create');
+Route::get('task/{id}', 'TaskController@show');
+Route::get('task/{id}/edit','TaskController@edit');
+Route::post('task/', 'TaskController@store');
