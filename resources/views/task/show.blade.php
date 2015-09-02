@@ -32,5 +32,12 @@
                 <td>{!! $task->title !!}</td>
             </tr>
         </table>
-        <div><a class="btn btn-info" href="/task/{!! $task->id !!}/edit">Редактировать задачу</a></div>
+        <div class="col-sm-3"><a class="btn btn-info" href="/task/{!! $task->id !!}/edit">Редактировать задачу</a></div>
+        <div class="col-sm-3">
+            {!! Form::model($task, ['method' => 'DELETE', 'action' => ['TaskController@destroy',$task->id ]] ) !!}
+            <div class="form-group">
+                {!! Form::submit('Удалить задачу', ['class' => 'btn btn-danger form-control']) !!}
+            </div>
+            {!! Form::close() !!}
+        </div>
 @stop

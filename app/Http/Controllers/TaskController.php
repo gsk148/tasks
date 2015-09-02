@@ -6,6 +6,7 @@ use App\Task;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Http\Requests\TaskRequest;
 use App\Http\Controllers\Controller;
 
 class TaskController extends Controller
@@ -17,7 +18,7 @@ class TaskController extends Controller
      */
     public function index()
     {
-        $tasks =  Task::all();
+        $tasks =  Task::orderBy('created_at', 'DESC')->get();
 
         return view('task.index', compact('tasks'));
     }
@@ -37,9 +38,10 @@ class TaskController extends Controller
      *
      * @return Response
      */
-    public function store(Request $request)
+    public function store(TaskRequest $request)
     {
-        return $request->all();
+        Task::create($request->all());
+        return redirect('tasks');
     }
 
     /**
@@ -74,9 +76,12 @@ class TaskController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update($id)
+    public function update(TaskRequest $request, $id)
     {
-        //
+        $task = Task::findOrFail($id);
+        $task->update($request->all());
+
+        return redirect('tasks');
     }
 
     /**
@@ -87,6 +92,9 @@ class TaskController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $task = Task::findOrFail($id);
+        $task->delete();
+
+        return redirect('tasks');
     }
 }

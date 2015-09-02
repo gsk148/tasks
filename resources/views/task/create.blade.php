@@ -14,4 +14,6 @@
         {!! Form::submit('Создать новую задачу', ['class' => 'btn btn-primary form-control']) !!}
     </div>
     {!! Form::close() !!}
+
+    @include('errors.list')
 @stop
