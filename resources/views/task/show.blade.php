@@ -31,6 +31,10 @@
                 <td><b>Куратор проекта</b></td>
                 <td>{!! $task->title !!}</td>
             </tr>
+            <tr>
+                <td><b>Статус проекта</b></td>
+                <td>{!! $task->status !!}</td>
+            </tr>
         </table>
         <div class="col-sm-3"><a class="btn btn-info" href="/task/{!! $task->id !!}/edit">Редактировать задачу</a></div>
         <div class="col-sm-3">

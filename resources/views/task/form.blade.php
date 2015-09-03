@@ -28,8 +28,3 @@
     {!! Form::label('supervisor', 'Куратор проекта:') !!}
     {!! Form::text('supervisor', null, ['class' => 'form-control']) !!}
 </div>
-<!-- status Form input -->
-<div class="form-group">
-    {!! Form::label('status', 'Статус задачи:') !!}
-    {!! Form::text('status', null, ['class' => 'form-control']) !!}
-</div>

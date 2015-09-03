@@ -36,3 +36,5 @@ Route::get('task/{id}/edit','TaskController@edit');
 route::patch('task/{id}', 'TaskController@update');
 Route::post('task/', 'TaskController@store');
 Route::delete('task/{id}', 'TaskController@destroy');
+Route::get('tasks/json', 'TaskController@toJson');
+

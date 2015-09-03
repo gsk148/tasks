@@ -9,11 +9,11 @@
     @if($tasks)
         <table class="table table-bordered">
             <tr>
-                <th>Название</th>
-                <th>Описание</th>
+                <th width="15%">Название</th>
+                <th width="45%">Описание</th>
                 <th>Инициатор</th>
                 <th>Исполнитель</th>
-                <th>Дата создания</th>
+                <th width="10%">Дата создания</th>
             </tr>
         @foreach($tasks as $task)
             <tr>

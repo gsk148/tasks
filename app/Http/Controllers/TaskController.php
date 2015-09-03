@@ -97,4 +97,11 @@ class TaskController extends Controller
 
         return redirect('tasks');
     }
+
+    public function toJson()
+    {
+       $tasks =  Task::orderBy('created_at', 'DESC')->get();
+       return $tasks->toJson();
+    }
+
 }
