@@ -2,53 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5cde73bf-7ee5-466a-a78e-d5ce2bb69191" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\_ide_helper.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\app\Http\Controllers\ProductController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\app\Http\Controllers\UserController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\app\Http\Requests\ProductRequest.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\app\Http\Requests\UserRequest.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\app\Product.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\database\migrations\2015_08_11_075520_create_products_table.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\database\migrations\2015_08_14_123254_update_users_table.php" afterPath="" />
       <change type="DELETED" beforePath="C:\Apache24\htdocs\product\database\migrations\2015_08_18_134051_update2_users_table.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\database\migrations\2015_08_18_152119_update_products_table.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\public\css\app.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\resources\views\app.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\resources\views\auth\login.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\resources\views\auth\register.blade.php" afterPath="" />
       <change type="DELETED" beforePath="C:\Apache24\htdocs\product\resources\views\errors\list.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\resources\views\pages\main.blade.php" afterPath="" />
       <change type="DELETED" beforePath="C:\Apache24\htdocs\product\resources\views\pages\navigation.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\resources\views\product\create.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\app\Product.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\resources\views\auth\login.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\public\css\app.css" afterPath="" />
       <change type="DELETED" beforePath="C:\Apache24\htdocs\product\resources\views\product\edit.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\resources\views\app.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\resources\views\user\index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\resources\views\user\show.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\app\Http\Requests\ProductRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\resources\views\product\create.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\resources\views\user\form.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\app\Http\Controllers\UserController.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\resources\views\product\show.blade.php" afterPath="" />
       <change type="DELETED" beforePath="C:\Apache24\htdocs\product\resources\views\product\form.blade.php" afterPath="" />
       <change type="DELETED" beforePath="C:\Apache24\htdocs\product\resources\views\product\index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\resources\views\product\show.blade.php" afterPath="" />
       <change type="DELETED" beforePath="C:\Apache24\htdocs\product\resources\views\user\create.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\resources\views\user\form.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\resources\views\user\index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\resources\views\auth\register.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\database\migrations\2015_08_14_123254_update_users_table.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\database\migrations\2015_08_18_152119_update_products_table.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\database\migrations\2015_08_11_075520_create_products_table.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\_ide_helper.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\resources\views\pages\main.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\app\Http\Requests\UserRequest.php" afterPath="" />
       <change type="DELETED" beforePath="C:\Apache24\htdocs\product\resources\views\user\info.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\resources\views\user\show.blade.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/.env.example" afterPath="$PROJECT_DIR$/../product/.env.example" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/.gitignore" afterPath="$PROJECT_DIR$/../product/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/resources/views/errors/503.blade.php" afterPath="$PROJECT_DIR$/../product/resources/views/errors/503.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/app/Http/Controllers/Auth/AuthController.php" afterPath="$PROJECT_DIR$/../product/app/Http/Controllers/Auth/AuthController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/app/Http/Controllers/Controller.php" afterPath="$PROJECT_DIR$/../product/app/Http/Controllers/Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/../product/database/seeds/DatabaseSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/app/Exceptions/Handler.php" afterPath="$PROJECT_DIR$/../product/app/Exceptions/Handler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/app/Jobs/Job.php" afterPath="$PROJECT_DIR$/../product/app/Jobs/Job.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/app/Http/Kernel.php" afterPath="$PROJECT_DIR$/../product/app/Http/Kernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/database/factories/ModelFactory.php" afterPath="$PROJECT_DIR$/../product/database/factories/ModelFactory.php" />
+      <change type="DELETED" beforePath="C:\Apache24\htdocs\product\app\Http\Controllers\ProductController.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/app/User.php" afterPath="$PROJECT_DIR$/../product/app/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/config/app.php" afterPath="$PROJECT_DIR$/../product/config/app.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/composer.json" afterPath="$PROJECT_DIR$/../product/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/composer.lock" afterPath="$PROJECT_DIR$/../product/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/package.json" afterPath="$PROJECT_DIR$/../product/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/resources/lang/en/passwords.php" afterPath="$PROJECT_DIR$/../product/resources/lang/en/passwords.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/app/Http/routes.php" afterPath="$PROJECT_DIR$/../product/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/config/services.php" afterPath="$PROJECT_DIR$/../product/config/services.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/resources/lang/en/validation.php" afterPath="$PROJECT_DIR$/../product/resources/lang/en/validation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/.env.example" afterPath="$PROJECT_DIR$/../product/.env.example" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/database/factories/ModelFactory.php" afterPath="$PROJECT_DIR$/../product/database/factories/ModelFactory.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/resources/views/welcome.blade.php" afterPath="$PROJECT_DIR$/../product/resources/views/welcome.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/config/app.php" afterPath="$PROJECT_DIR$/../product/config/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/.gitignore" afterPath="$PROJECT_DIR$/../product/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/package.json" afterPath="$PROJECT_DIR$/../product/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/../product/database/seeds/DatabaseSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/app/Jobs/Job.php" afterPath="$PROJECT_DIR$/../product/app/Jobs/Job.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/app/Http/Controllers/Auth/AuthController.php" afterPath="$PROJECT_DIR$/../product/app/Http/Controllers/Auth/AuthController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/resources/views/errors/503.blade.php" afterPath="$PROJECT_DIR$/../product/resources/views/errors/503.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/composer.lock" afterPath="$PROJECT_DIR$/../product/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/config/services.php" afterPath="$PROJECT_DIR$/../product/config/services.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/app/Exceptions/Handler.php" afterPath="$PROJECT_DIR$/../product/app/Exceptions/Handler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/app/Http/Kernel.php" afterPath="$PROJECT_DIR$/../product/app/Http/Kernel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/app/Http/routes.php" afterPath="$PROJECT_DIR$/../product/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/resources/lang/en/passwords.php" afterPath="$PROJECT_DIR$/../product/resources/lang/en/passwords.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/app/Http/Controllers/Controller.php" afterPath="$PROJECT_DIR$/../product/app/Http/Controllers/Controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/composer.json" afterPath="$PROJECT_DIR$/../product/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../product/resources/lang/en/validation.php" afterPath="$PROJECT_DIR$/../product/resources/lang/en/validation.php" />
     </list>
     <ignored path="tasks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -158,15 +158,15 @@
       </file>
       <file leaf-file-name="tasks.tasks" pinned="false" current-in-tab="false">
         <entry file="dbDummy://dbtable:/61165b20/11991be5-1682-4d93-87f4-fb7fbb8e6d7d/tasks..tasks">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="51" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -184,7 +184,7 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/task/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38988096">
+            <state vertical-scroll-proportion="0.44642857">
               <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
               <folding />
             </state>
@@ -314,6 +314,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -453,7 +454,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -528,8 +528,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14613779" sideWeight="0.51582277" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14895834" sideWeight="0.4841772" order="0" side_tool="false" content_ui="combo" />
@@ -539,7 +539,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1421875" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964823" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2964824" sideWeight="0.48329854" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2964824" sideWeight="0.48329854" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -870,7 +870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5952381">
           <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -883,15 +882,14 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/61165b20/11991be5-1682-4d93-87f4-fb7fbb8e6d7d/tasks..stages">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -909,7 +907,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.70238096">
           <caret line="20" column="99" selection-start-line="20" selection-start-column="99" selection-end-line="20" selection-end-column="105" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -922,28 +919,27 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/61165b20/11991be5-1682-4d93-87f4-fb7fbb8e6d7d/tasks..users">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/61165b20/11991be5-1682-4d93-87f4-fb7fbb8e6d7d/tasks..tasks">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/61165b20/11991be5-1682-4d93-87f4-fb7fbb8e6d7d/tasks..tasks">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="51" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -951,7 +947,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.81845236">
           <caret line="22" column="68" selection-start-line="22" selection-start-column="68" selection-end-line="22" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -973,7 +968,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/task/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38988096">
+        <state vertical-scroll-proportion="0.44642857">
           <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
           <folding />
         </state>
