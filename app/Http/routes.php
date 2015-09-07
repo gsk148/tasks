@@ -29,7 +29,7 @@ Route::get('users', 'UserController@index');
 Route::get('user/{id}', 'UserController@show');
 
 //tasks
-Route::get('tasks', 'TaskController@index');
+//Route::get('tasks', 'TaskController@index');
 Route::get('task/create', 'TaskController@create');
 Route::get('task/{id}', 'TaskController@show');
 Route::get('task/{id}/edit','TaskController@edit');
@@ -37,4 +37,10 @@ route::patch('task/{id}', 'TaskController@update');
 Route::post('task/', 'TaskController@store');
 Route::delete('task/{id}', 'TaskController@destroy');
 Route::get('tasks/json', 'TaskController@toJson');
+
+Route::get('/tasks', [
+    'middleware' => ['auth', 'acl:admin_all'],
+    'as' => 'tasks.all',
+    'uses' => 'TaskController@index'
+]);
 
