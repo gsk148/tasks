@@ -23,6 +23,20 @@
     {!! Form::label('implementer', 'Исполнитель / исполнители:') !!}
     {!! Form::text('implementer', null, ['class' => 'form-control']) !!}
 </div>
+<!-- implementer Form input -->
+<div class="form-group">
+    {!! Form::label('implementer', 'Исполнитель / исполнители:') !!}
+    <select multiple="multiple">
+        <optgroup label="Cats">
+            <option value="leopard">Leopard</option>
+            <option value="tiger">Tiger</option>
+        </optgroup>
+        <optgroup label="Dogs">
+            <option value="spaniel">Spaniel</option>
+        </optgroup>
+    </select>
+</div>
+
 <!-- supervisor Form input -->
 <div class="form-group">
     {!! Form::label('supervisor', 'Куратор проекта:') !!}

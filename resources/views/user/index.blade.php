@@ -10,12 +10,16 @@
         <table class="table table-bordered table-hover">
                 <tr>
                     <th>Имя</th>
+                    <th>Подразделение</th>
+                    <th>Должность</th>
                     <th>E-mail</th>
                     <th>Время создания</th>
                 </tr>
         @foreach($users as $user)
                 <tr>
-                    <td>{!! $user->name !!}</td>
+                    <td>{!! $user->name !!} {!! $user->last_name !!} </td>
+                    <td>{!! $user->department !!}</td>
+                    <td>{!! $user->position !!}</td>
                     <td>{!! $user->email !!}</td>
                     <td>{!! $user->created_at !!}</td>
                 </tr>

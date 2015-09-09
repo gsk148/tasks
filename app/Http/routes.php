@@ -26,16 +26,15 @@ Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 Route::get('users', 'UserController@index');
-Route::get('user/{id}', 'UserController@show');
+//Route::get('user/{id}', 'UserController@show');
 
 //tasks
 //Route::get('tasks', 'TaskController@index');
-Route::get('task/create', 'TaskController@create');
-Route::get('task/{id}', 'TaskController@show');
-Route::get('task/{id}/edit','TaskController@edit');
-route::patch('task/{id}', 'TaskController@update');
-Route::post('task/', 'TaskController@store');
-Route::delete('task/{id}', 'TaskController@destroy');
+Route::group(['middleware' => 'auth'], function()
+{
+    Route::resource('task', 'TaskController', ['except' => ['index']]);
+    Route::resource('user', 'UserController', ['only' =>['show']]);
+});
 Route::get('tasks/json', 'TaskController@toJson');
 
 Route::get('/tasks', [

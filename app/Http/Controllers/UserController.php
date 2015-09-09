@@ -17,7 +17,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+        $users = User::orderBy('last_name', 'ASC')->where('department', '!=', '')->get();
         return view('user.index', compact('users'));
     }
 
@@ -85,4 +85,5 @@ class UserController extends Controller
     {
         //
     }
+
 }
