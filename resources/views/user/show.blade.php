@@ -6,7 +6,6 @@
 
 @section('mainContent')
     <h3>Информация о пользователе {!! $user->name !!}</h3>
-
     @foreach(App\User::find(1)->roles as $user)
             {{--*/ $role  = $user->role_title /*--}}
             @if($role == 'admin')

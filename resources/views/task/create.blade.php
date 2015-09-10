@@ -8,6 +8,7 @@
     <h3>Создание новой задачи</h3>
     {!! Form::open(['url' => 'task'])  !!}
 
+
     @include('task.form')
     <input type="hidden" name="status" value="{{ \App\Stage::statusCreate() }}" >
             <!-- Сохранить измения Form submit -->
