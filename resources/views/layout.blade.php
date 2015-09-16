@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>@yield('title')</title>
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/app.css" rel="stylesheet">
+    <link href="{{ elixir('css/all.css') }}" rel="stylesheet">
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
 

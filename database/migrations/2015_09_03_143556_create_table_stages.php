@@ -14,7 +14,7 @@ class CreateTableStages extends Migration
     {
         Schema::create('stages', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('stage', 255);
+            $table->string('status', 255);
             $table->text('description');
             $table->timestamps();
         });
