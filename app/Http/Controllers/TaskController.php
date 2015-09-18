@@ -40,7 +40,38 @@ class TaskController extends Controller
      */
     public function store(TaskRequest $request)
     {
-        Task::create($request->all());
+
+       $task = Task::create([
+            'title' => $request->input('title'),
+            'description' => $request->input('description'),
+            'is_active' => $request->input('is_active'),
+        ]);
+
+        $taskId = $task->id;
+        foreach( $request->input('implementer') as $implementer){
+            \DB::table('task_implementer')->insert([
+                ['task_id' => $taskId, 'user_id' => $implementer],
+            ]);
+        }
+
+        foreach( $request->input('owner') as $owner){
+            \DB::table('task_owner')->insert([
+                ['task_id' => $taskId, 'user_id' => $owner],
+            ]);
+        }
+
+        // insert moverId into tables task_mover
+        \DB::table('task_mover')->insert([
+            ['task_id' => $taskId, 'user_id' => $request->input('mover')],
+        ]);
+
+        // insert supervisorId into tables task_supervisor
+        foreach( $request->input('supervisor') as $supervisor) {
+            \DB::table('task_supervisor')->insert([
+                ['task_id' => $taskId, 'user_id' => $supervisor],
+            ]);
+        }
+
         return redirect('tasks');
     }
 

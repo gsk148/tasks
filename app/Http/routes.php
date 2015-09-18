@@ -34,12 +34,14 @@ Route::group(['middleware' => 'auth'], function()
 {
     Route::resource('task', 'TaskController', ['except' => ['index']]);
     Route::resource('user', 'UserController', ['only' =>['show']]);
+    Route::get('/my-tasks', 'UserController@myTask');
 });
 Route::get('tasks/json', 'TaskController@toJson');
-
+Route::get('tasks', 'TaskController@index');
+/*
 Route::get('/tasks', [
     'middleware' => ['auth', 'acl:admin_all'],
     'as' => 'tasks.all',
     'uses' => 'TaskController@index'
 ]);
-
+*/

@@ -86,4 +86,9 @@ class UserController extends Controller
         //
     }
 
+    public function myTask()
+    {
+        return view('pages.my-tasks');
+    }
+
 }

@@ -5,14 +5,16 @@
 @stop
 
 @section('mainContent')
-    <h1>Начальная страница</h1>
+    <h2>Начальная страница</h2>
     <hr />
      @if (Auth::check())
          <h3>Рады тебя видеть, {!! Auth::user()->name !!}!</h3>
-         <h4>Твой email - {!! Auth::user()->email !!} </h4>
-         <p><a class="btn btn-warning" href="auth/logout">Выйти</a></p>
-
+         <div class="list-group col-md-6">
+             <a href="/my-tasks" class="list-group-item">My tasks</a>
+             <a href="/task/create" class="list-group-item">Create new task</a>
+             <a href="/task/edit" class="list-group-item">Edit task</a>
+         </div>
      @else
-        <div class="alert alert-danger"><h3>Сынок, для начала тебе надо <a href="auth/login ">авторизоваться</a>!</h3></div>
+        <div class="well well-sm"><h5>Сынок, для того чтобы начать работу с системой, тебе надо <a href="auth/login "><b>авторизоваться</b></a>!</h5></div>
     @endif
 @stop

@@ -13,7 +13,6 @@
                     <th>Подразделение</th>
                     <th>Должность</th>
                     <th>E-mail</th>
-                    <th>Время создания</th>
                 </tr>
         @foreach($users as $user)
                 <tr>
@@ -21,7 +20,6 @@
                     <td>{!! $user->department !!}</td>
                     <td>{!! $user->position !!}</td>
                     <td>{!! $user->email !!}</td>
-                    <td>{!! $user->created_at !!}</td>
                 </tr>
         @endforeach
         </table>

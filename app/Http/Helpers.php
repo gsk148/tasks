@@ -50,7 +50,7 @@ class  Helper {
             $output .= '<optgroup label= "'. $value .'">';
             foreach ($users  as $user => $val)
             {
-                $output .= '<option>' . $val->last_name . ' '. $val->name . ' - ' . $val->position .'</option>';
+                $output .= '<option value="'. $val->id .'">' . $val->last_name . ' '. $val->name . ' - ' . $val->position .'</option>';
             }
             $output .= '</optgroup>';
         }
@@ -58,10 +58,6 @@ class  Helper {
         return $output;
     }
 
-    public function getOwner()
-    {
-
-    }
     /**
      * Getting a list of department
      *
