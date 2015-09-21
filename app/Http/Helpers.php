@@ -58,6 +58,52 @@ class  Helper {
         return $output;
     }
 
+
+    /**
+     * Get my tasks array different role
+     *
+     * @param $userId, $roleTable
+     * @return array
+     */
+    public static function myTasks($userId, $roleTable)
+    {
+        $tasks_id = [];
+        $tasks = [];
+        // write task ids for table as implementer
+        $tasks_obj = \DB::table($roleTable)->select('task_id')->where('user_id', '=', $userId)->get();
+        foreach ($tasks_obj as $task) {
+            $tasks_id[] = $task->task_id;
+        }
+
+        foreach ($tasks_id as $id) {
+            $tasks[] = \DB::table('tasks')->where('id', '=', $id)->first();
+        }
+
+        return $tasks;
+    }
+
+
+    public static function taskStatus($taskId)
+    {
+        $status = null;
+        $tasks = \DB::table('tasks')->where('id', '=', $taskId)->get();
+
+        foreach ( $tasks as $task) {
+            $status = $task->is_active;
+        }
+
+        if ($status === 1) {
+            $status = 'active';
+        } else {
+            $status = 'deactivate';
+        }
+
+        return $status;
+    }
+
+
+
+
     /**
      * Getting a list of department
      *
@@ -74,6 +120,8 @@ class  Helper {
 
         return $departments;
     }
+
+
 
 }
 

@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Tasks project</a>
+            <a class="navbar-brand" href="/">Tasks project</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -31,7 +31,13 @@
                     <li><a href="/auth/login">Войти</a></li>
                     <li><a href="/auth/register">Регистрация</a></li>
                 @else
-                    <li><a href="/auth/logout">Выход</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">  {!! Auth::user()->name !!} {!! Auth::user()->last_name !!} <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/my-tasks">Мои задачи</a></li>
+                            <li><a href="/auth/logout">Выход</a></li>
+                        </ul>
+                    </li>
                 @endif
             </ul>
         </div>
