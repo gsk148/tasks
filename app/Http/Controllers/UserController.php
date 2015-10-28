@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
+use App\Http\Requests\UserRequest;
 use App\Http\Controllers\Controller;
 
 class UserController extends Controller
@@ -17,7 +17,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::orderBy('last_name', 'ASC')->where('department', '!=', '')->get();
+        //$users = User::orderBy('last_name', 'ASC')->where('department', '!=', '')->get();
+        $users = User::paginate(15);
         return view('user.index', compact('users'));
     }
 
@@ -28,7 +29,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('user.create');
     }
 
     /**
@@ -36,9 +37,12 @@ class UserController extends Controller
      *
      * @return Response
      */
-    public function store()
+    public function store(UserRequest $request)
     {
-        //
+        User::create($request->all());
+        flash()->info('Добавлен новый пользователь!');
+
+        return redirect()->route('user.index');
     }
 
     /**
@@ -50,6 +54,7 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::findOrFail($id);
+
         return view('user.show', compact('user'));
     }
 
@@ -61,7 +66,9 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::findOrFail($id);
+        flash()->success('Страница для изменения информации!');
+        return view('user.edit', compact('user'));
     }
 
     /**

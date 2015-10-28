@@ -9,18 +9,14 @@
     @if($tasks)
         <table class="table table-bordered">
             <tr>
-                <th width="15%">Название</th>
-                <th width="45%">Описание</th>
-                <th>Инициатор</th>
-                <th>Исполнитель</th>
-                <th width="10%">Дата создания</th>
+                <th width="30%">Название</th>
+                <th width="50%">Описание</th>
+                <th width="20%">Дата создания</th>
             </tr>
         @foreach($tasks as $task)
             <tr>
                 <td><a href="task\{{ $task->id }}">{{ $task->title }}</a></td>
-                <td>{{ $task->description }}</td>
-                <td>{{ $task->mover }}</td>
-                <td>{{ $task->implementer }}</td>
+                <td> {{ str_limit($task->description, 50) }}</td>
                 <td>{{ DATE_FORMAT($task->created_at,"d.m.y") }}</td>
             </tr>
         @endforeach

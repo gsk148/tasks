@@ -5,17 +5,26 @@
 @stop
 
 @section('mainContent')
-    <h3>Информация о пользователе {!! $user->name !!}</h3>
-    @foreach(App\User::find(1)->roles as $user)
-            {{--*/ $role  = $user->role_title /*--}}
-            @if($role == 'admin')
-                <p>Вы авторизованы, как <strong>{{ $role }}</strong></p>
-            @endif
-            @if (Auth::user())
-                {!! Auth::user()->id !!}
-            @else
-                <div class="alert alert-danger">User is not logged!</div>
-            @endif
-    @endforeach
+    @include('partials.flash')
+    <h3>Информация о пользователе: {{ $user->name }} {{ $user->last_name }}</h3>
+    <table class="table table-bordered">
+        <tr>
+            <td>Отдел</td>
+            <td>{{ App\Http\Helper::getDepartmentName($user->department_id) }}</td>
+        </tr>
+        <tr>
+            <td>Должность</td>
+            <td>{{ $user->position }}</td>
+        </tr>
+        <tr>
+            <td>E-mail</td>
+            <td><a href="mailto:{{ $user->email }}"> {{ $user->email }}</a></td>
+        </tr>
+        <tr>
+            <td>Текущие задачи</td>
+            <td>{!! App\Http\Helper::getUserTasks($user) !!}</td>
+        </tr>
+    </table>
+
 
 @stop

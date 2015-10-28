@@ -6,6 +6,7 @@
 
 @section('mainContent')
     <h3>Создание новой задачи</h3>
+    @include('errors.list')
     {!! Form::open(['url' => 'task'])  !!}
 
     @include('task.form')
@@ -15,6 +16,4 @@
     </div>
 
     {!! Form::close() !!}
-
-    @include('errors.list')
 @stop

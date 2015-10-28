@@ -8,10 +8,8 @@
     @if (Auth::check())
          {{--<h3>Рады тебя видеть, {!! Auth::user()->name !!}!</h3>--}}
          <h3>Домашняя страница</h3>
-         <div class="list-group col-md-6">
-             <a href="/my-tasks" class="list-group-item">Мои задачи</a>
-             <a href="/task/create" class="list-group-item">Создать новую задачу</a>
-             <a href="/task/edit" class="list-group-item">Изменить задачу</a>
+         <div class="well">
+             <p>Начальная страница</p>
          </div>
      @else
         <h2>Начальная страница</h2>

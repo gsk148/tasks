@@ -126,6 +126,11 @@ return [
         'owner'         =>  'Владелец',
         'implementer'   =>  'Исполнитель',
         'supervisor'    =>  'Куратор',
+        'name'          => 'Имя',
+        'last_name'     => 'Фамилия',
+        'department'    => 'Отдел',
+        'position'      => 'Должность',
+        'password'      => 'Пароль',
     ],
 
 ];

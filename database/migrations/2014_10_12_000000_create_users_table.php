@@ -16,12 +16,15 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('name', 255);
             $table->string('last_name', 255);
-            $table->string('department', 255);
+            $table->integer('department_id');
             $table->string('position', 255);
             $table->string('email')->unique();
             $table->string('password', 60);
             $table->rememberToken();
             $table->timestamps();
+
+           // $table->foreign('department_id')->references('id')->on('departments')->onDelete('cascade');
+
         });
     }
 

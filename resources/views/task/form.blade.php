@@ -17,23 +17,18 @@
 <!-- owner Form input -->
 <div class="form-group">
     {!! Form::label('owner', 'Владелец / владельцы процесса:') !!}
-    <select class="form-control"  id="owner" name="owner[]" multiple="multiple">
-        {!! App\Http\Helper::getUsersListSelect() !!}
-    </select>
+    {!! Form::select('owner[]', App\Http\Helper::getUsers(), null, [ 'class' => 'form-control', 'multiple']) !!}
 </div>
 
 <!-- implementer Form input -->
+
 <div class="form-group">
     {!! Form::label('implementer', 'Исполнитель / исполнители:') !!}
-    <select class="form-control" id="implementer" name="implementer[]" multiple="multiple">
-         {!! App\Http\Helper::getUsersListSelect() !!}
-    </select>
+    {!! Form::select('implementer[]', App\Http\Helper::getUsers(), null, [ 'class' => 'form-control', 'multiple']) !!}
 </div>
 
 <!-- supervisor Form input -->
 <div class="form-group">
     {!! Form::label('supervisor', 'Куратор проекта:') !!}
-    <select class="form-control" id="supervisor" name="supervisor[]" multiple="multiple">
-        {!! App\Http\Helper::getUsersListSelect() !!}
-    </select>
+    {!! Form::select('supervisor[]', App\Http\Helper::getUsers(), null, [ 'class' => 'form-control', 'multiple']) !!}
 </div>

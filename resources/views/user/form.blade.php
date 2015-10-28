@@ -1,25 +1,25 @@
 <!-- name Form input -->
 <div class="form-group">
-    {!! Form::label('name', 'Name:') !!}
+    {!! Form::label('name', 'Имя:') !!}
     {!! Form::text('name', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- last_name Form input -->
 <div class="form-group">
-    {!! Form::label('last_name', 'Last name:') !!}
+    {!! Form::label('last_name', 'Фамилия:') !!}
     {!! Form::text('last_name', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- position Form input -->
 <div class="form-group">
-    {!! Form::label('position', 'Position:') !!}
+    {!! Form::label('position', 'Должность:') !!}
     {!! Form::text('position', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- department Form input -->
 <div class="form-group">
-    {!! Form::label('department', 'Department:') !!}
-    {!! Form::text('department', null, ['class' => 'form-control']) !!}
+   {!! Form::label('department_id', 'Название отдела:') !!}
+   {!! Form::select('department_id', App\Http\Helper::getDepartments(), null, [ 'class' => 'form-control']) !!}
 </div>
 
 <div class="form-group">
@@ -29,12 +29,12 @@
 
 <!-- password Form input -->
 <div class="form-group">
-    {!! Form::label('password', 'Password:') !!}
+    {!! Form::label('password', 'Пароль:') !!}
     {!! Form::password('password', ['class' => 'form-control']) !!}
 </div>
 
 <!-- password Form input -->
 <div class="form-group">
-    {!! Form::label('password_confirmation', 'Confirm password:') !!}
+    {!! Form::label('password_confirmation', 'Подтверждение пароля:') !!}
     {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
 </div>

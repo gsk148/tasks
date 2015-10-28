@@ -3,125 +3,130 @@ namespace App\Http;
 
 use App\User;
 use App\Http\Requests;
+use DB;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
 use App\Http\Controllers\Controller;
 
 class  Helper {
 
-    public static function getImplementersSelect()
+    public static function getDepartments()
     {
-        $users = User::orderBy('last_name')->where('department', '=', 'ОПР')->get();
-        $implementers = '<select multiple="multiple" class="form-control" name="implementer" id="implementer" size="2"><optgroup label="ОПР">';
-        foreach ($users as $user => $value)
-        {
-            $implementers .= '<option>'. $value->last_name .' '. $value->name .'</option>';
-        }
-        $implementers .= '</optgroup></select>';
+        $departments = DB::table('departments')->lists('title');
 
-        return $implementers;
+        return $departments;
     }
 
     /**
-     * @return string
+     * Returns active users list
+     *
+     * @return array
      */
-    public static function getOwnerSelect()
+    public static function getUsers()
     {
-        $users = User::orderBy('department')->get();
-        $owners = '<select multiple="multiple" class="form-control" name="owners" id="owners" size="2">';
-        foreach ($users as $user => $value)
-        {
-            $owners .= '<option>' . $value->last_name .' '. $value->name . '</option>';
-        }
-        $owners .= '</select>';
+        // $users = \DB::table('users')->lists('last_name', 'id');
+        //$users = \DB::table('users')->get();
+        $users = DB::table('users')->select(DB::raw('concat (last_name," ",name) as full_name,id'))->lists('full_name', 'id');
 
-        return $owners;
+        return $users;
     }
 
-    public static function getUsersListSelect()
+
+    /**
+     * Get users for views of tasks
+     *
+     * @param $task_id
+     * @param $table_name
+     * @param string $btn
+     * @return null|string
+     */
+    public static function getEmployers($task_id, $table_name, $btn = 'default')
     {
-        $departments = self::departmentsList();
-        $output = '';
-        foreach ($departments as $key => $value)
-        {
+        $tasks = DB::table($table_name)->where('task_id', $task_id)->get();
+        foreach ($tasks as $task) {
+            $users[] = DB::table('users')->where('id', $task->user_id)->first();
+        }
 
-            $users = User::orderBy('last_name')->where('department', '=', $value)->get();
+        $output = null;
+        foreach ($users as $user) {
+            $output .= '<a class="btn btn-'.$btn.'" href="/user/'. $user->id .'"  >' . $user->last_name . ' ';
+            $output .= $user->name. '</a> ';
+        }
+        return $output;
+    }
+    /**
+     * Return name of user which a task's mover
+     *
+     * @param $task_id
+     * @param $table_name
+     * @return mixed
+     */
+    public static function getEmployeName( $task_id, $table_name)
+    {
 
-            $output .= '<optgroup label= "'. $value .'">';
-            foreach ($users  as $user => $val)
-            {
-                $output .= '<option value="'. $val->id .'">' . $val->last_name . ' '. $val->name . ' - ' . $val->position .'</option>';
-            }
-            $output .= '</optgroup>';
+        $row = DB::table($table_name)->where('task_id', $task_id)->first();
+        $user = DB::table('users')->where('id', $row->user_id)->first();
+
+        return $user->name;
+    }
+
+    /**
+     * Return name of user which a task's mover
+     *
+     * @param $task_id
+     * @param $table_name
+     * @return mixed
+     */
+    public static function getEmployeLastName($task_id, $table_name)
+    {
+        $row = DB::table($table_name)->where('task_id', $task_id)->first();
+        $user = DB::table('users')->where('id', $row->user_id)->first();
+
+        return $user->last_name;
+    }
+
+
+    /**
+     * Return a department title
+     *
+     * @param $department_id
+     * @return mixed
+     */
+    public static function getDepartmentName($department_id)
+    {
+
+        $row = DB::table('departments')->where('id', $department_id)->first();
+
+        return $row->title;
+    }
+
+    /**
+     * @param User $user
+     * @return null|string
+     */
+    public static function getUserTasks(User $user)
+    {
+        $rows = [];
+        $tasks = DB::table('task_implementer')->where('user_id', $user->id)->get();
+        foreach ($tasks as $task) {
+            $rows[] = DB::table('tasks')->where('id', $task->task_id)->first(); //$task->task_id;
+        }
+        $output = null;
+        foreach($rows as $task) {
+            $output .=  '<a href="/task/'. $task->id .'" class="btn btn-info">' . $task->title .'</a> ';
         }
 
         return $output;
     }
 
-
-    /**
-     * Get my tasks array different role
-     *
-     * @param $userId, $roleTable
-     * @return array
-     */
-    public static function myTasks($userId, $roleTable)
+    public static function UserListId($table_name, $task_id)
     {
-        $tasks_id = [];
-        $tasks = [];
-        // write task ids for table as implementer
-        $tasks_obj = \DB::table($roleTable)->select('task_id')->where('user_id', '=', $userId)->get();
-        foreach ($tasks_obj as $task) {
-            $tasks_id[] = $task->task_id;
-        }
+        $output = DB::table($table_name)->where('task_id', $task_id)->lists('user_id');
 
-        foreach ($tasks_id as $id) {
-            $tasks[] = \DB::table('tasks')->where('id', '=', $id)->first();
-        }
+        //$output = [3,5];
 
-        return $tasks;
+        return $output;
     }
-
-
-    public static function taskStatus($taskId)
-    {
-        $status = null;
-        $tasks = \DB::table('tasks')->where('id', '=', $taskId)->get();
-
-        foreach ( $tasks as $task) {
-            $status = $task->is_active;
-        }
-
-        if ($status === 1) {
-            $status = 'active';
-        } else {
-            $status = 'deactivate';
-        }
-
-        return $status;
-    }
-
-
-
-
-    /**
-     * Getting a list of department
-     *
-     * @return array
-     */
-    private static function departmentsList()
-    {
-        $users = User::orderBy('department')->where('department', '!=', '')->groupBy('department')->get();
-        $departments = [];
-        foreach ($users as $user => $value )
-        {
-            $departments[] = $value->department;
-        }
-
-        return $departments;
-    }
-
-
 
 }
 

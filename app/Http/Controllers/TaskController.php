@@ -40,7 +40,7 @@ class TaskController extends Controller
      */
     public function store(TaskRequest $request)
     {
-
+       // dd($request->input());
        $task = Task::create([
             'title' => $request->input('title'),
             'description' => $request->input('description'),
